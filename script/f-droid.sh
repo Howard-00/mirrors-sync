@@ -2,7 +2,9 @@
 #!/bin/bash
 
 export sync_path="/mirrors"
-export sync_url="rsync://ftp.fau.de"
+export upstream_path="fdroid"
+export proxy_port="9982"
+export sync_url="rsync://proxy.uestclug.org"
 export sync_name="f-droid"
-export sync_command="rsync -rltz --progress --delete --log-file=$sync_path/log/$sync_name.log $sync_url/$sync_name $sync_path/data/$sync_name"
+export sync_command="rsync -rltz6 --port=$proxy_port --progress --delete-after --delay-updates --safe-links --contimeout=60 --log-file=$sync_path/log/$sync_name.log $sync_url/$upstream_path $sync_path/data/$sync_name"
 sh "$sync_path/sync/script/rsync_common.sh"
