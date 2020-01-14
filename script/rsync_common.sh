@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 touch $sync_path/status/$sync_name
 if [ `cat "$sync_path/status/$sync_name"` == "syncing" ] ; then
