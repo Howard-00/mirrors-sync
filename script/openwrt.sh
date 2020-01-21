@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export sync_path="/mirrors"
+export upstream_path="downloads"
 export sync_url="rsync://proxy.uestclug.org"
 export sync_name="openwrt"
 export proxy_port="9984"
