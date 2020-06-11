@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 export sync_path="/mirrors"
